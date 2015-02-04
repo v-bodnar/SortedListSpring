@@ -61,24 +61,24 @@ public class HelloController {
             } catch (PersistException e) {
                 LOG.severe(e.getMessage());
             }
-        }
+        }else {
 
-        //Cleaning file and writing to file
-        List<ListItem> listItems = new ArrayList<ListItem>();
-        Integer id = 1;
-        for (String value : items) {
-            listItems.add(new ListItem(id, value));
-            id++;
-        }
+            //Cleaning file and writing to file
+            List<ListItem> listItems = new ArrayList<ListItem>();
+            Integer id = 1;
+            for (String value : items) {
+                listItems.add(new ListItem(id, value));
+                id++;
+            }
 
-        try {
-            itemsDao.removeAll();
-            for (ListItem item : listItems)
-                itemsDao.create(item);
-        } catch (PersistException e) {
-            LOG.severe(e.getMessage());
+            try {
+                itemsDao.removeAll();
+                for (ListItem item : listItems)
+                    itemsDao.create(item);
+            } catch (PersistException e) {
+                LOG.severe(e.getMessage());
+            }
         }
-
         return "200";
     }
 
