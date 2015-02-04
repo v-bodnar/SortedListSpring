@@ -1,0 +1,10 @@
+ul{
+    border:1px inset  darkgray;
+    width:200px;
+}
+ul li{
+    width:200px;
+}
+button{
+    display: none;
+}
