@@ -8,7 +8,7 @@ $( document ).ready(function() {
 });
 
 function add(){
-    $("#sortedList").append('<li>'+$("#newItem").val()+'</li>');
+    $("#sortedList").append('<li class="list-group-item">'+$("#newItem").val()+'</li>');
     $("#newItem").val('');
     $("#sortedList").has('li').length ? $("#sortedList").show() : $("#sortedList").hide();
     saveToFile();
