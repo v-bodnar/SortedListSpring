@@ -38,7 +38,7 @@ public class HelloController {
         return "hello";
     }
 
-    @RequestMapping(value = "/ajaxtest", method = RequestMethod.POST,
+    @RequestMapping(value = "/SaveList", method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE,
             headers = "content-type=application/x-www-form-urlencoded")
     @ResponseBody

@@ -2,7 +2,7 @@
  * Created by Volodymyr Bodnar on 04.02.2015.
  */
 
-function saveToFile(){
+function saveToFile(serverUrl){
     listItems=[];
 
     $("#sortedList li").each(function() {
@@ -14,7 +14,7 @@ function saveToFile(){
     else
         var data = {"listItems":listItems};
 
-    $.post("ajaxtest", data,function(e) {
+    $.post(serverUrl, data,function(e) {
     }, "json");
 
 }

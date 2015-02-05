@@ -2,6 +2,8 @@
  * Created by Volodymyr Bodnar on 04.02.2015.
  */
 var selectedItemIndex;
+var serverUrl = "SaveList";
+
 $( document ).ready(function() {
     $("#sortedList").has('li').length ? $("#sortedList").show() : $("#sortedList").hide();
     $("#button-group").hide();
@@ -11,7 +13,7 @@ function add(){
     $("#sortedList").append('<li class="list-group-item">'+$("#newItem").val()+'</li>');
     $("#newItem").val('');
     $("#sortedList").has('li').length ? $("#sortedList").show() : $("#sortedList").hide();
-    saveToFile();
+    saveToFile(serverUrl);
 };
 
 $("#sortedList").on("click","li", function(event) {
@@ -30,7 +32,7 @@ $("#up").on("click","", function(event) {
     {
         selectedItemIndex.insertBefore(selectedItemIndex.prev());
     }
-    saveToFile();
+    saveToFile(serverUrl);
 });
 
 $("#down").on("click","", function(event) {
@@ -38,13 +40,13 @@ $("#down").on("click","", function(event) {
     {
         selectedItemIndex.insertAfter(selectedItemIndex.next())
     }
-    saveToFile();
+    saveToFile(serverUrl);
 });
 
 
 $("#save").on("click","", function(event) {
     selectedItemIndex.text($("#newItem").val());
-    saveToFile();
+    saveToFile(serverUrl);
 });
 
 $("#delete").on("click","", function(event) {
@@ -69,5 +71,5 @@ $("#delete").on("click","", function(event) {
             $("#button-group").hide();
         }
     }
-    saveToFile();
+    saveToFile(serverUrl);
 });
