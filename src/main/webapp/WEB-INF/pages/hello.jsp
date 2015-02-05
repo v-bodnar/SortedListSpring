@@ -22,7 +22,10 @@
     <div class="input-group">
         <input type="text" class="form-control"  id="newItem"/>
         <span class="input-group-btn">
-            <input type="submit" class="btn btn-default" value="${submit}" onclick="add()">
+            <button type="button" class="btn btn-default" onclick="add()">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"/>
+                <c:out value="${submit}"     />
+            </button>
         </span>
     </div>
 
@@ -35,10 +38,22 @@
     </div>
 
     <div id="button-group" class="btn-group" role="group">
-        <button type="button" class="btn btn-default" id="up"     ><c:out value="${up}"/>   </button>
-        <button type="button" class="btn btn-default" id="down"   ><c:out value="${down}"/> </button>
-        <button type="button" class="btn btn-default" id="save"   ><c:out value="${save}"/> </button>
-        <button type="button" class="btn btn-default" id="delete" ><c:out value="${delete}"/></button>
+        <button type="button" class="btn btn-default" id="up"     >
+            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"/>
+            <c:out value="${up}"     />
+        </button>
+        <button type="button" class="btn btn-default" id="down"   >
+            <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"/>
+            <c:out value="${down}"   />
+        </button>
+        <button type="button" class="btn btn-default" id="save"   >
+            <span class="glyphicon glyphicon-save" aria-hidden="true"/>
+            <c:out value="${save}"   />
+        </button>
+        <button type="button" class="btn btn-default" id="delete" >
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"/>
+            <c:out value="${delete}" />
+        </button>
     </div>
 </div>
 <script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" />"></script>
