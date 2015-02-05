@@ -22,7 +22,7 @@
     <div class="input-group">
         <input type="text" class="form-control"  id="newItem"/>
         <span class="input-group-btn">
-            <button type="button" class="btn btn-default" onclick="add()">
+            <button id="add" type="button" class="btn btn-default" >
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"/>
                 <c:out value="${submit}"     />
             </button>
