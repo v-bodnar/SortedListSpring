@@ -2,7 +2,7 @@ button{
     display: none;
 }
 #container{
-    width:330px;
+    width:330px !important;
     margin: 10px;
 }
 

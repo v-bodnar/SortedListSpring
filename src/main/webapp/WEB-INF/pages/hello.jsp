@@ -57,7 +57,7 @@
     </div>
 </div>
 <script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" />"></script>
-<script src="<c:url value="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"/>"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="<c:url value="/js/ui.js" />"></script>
 <script src="<c:url value="/js/api.js" />"></script>
 
