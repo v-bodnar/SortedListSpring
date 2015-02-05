@@ -14,7 +14,7 @@ function saveToFile(){
     else
         var data = {"listItems":listItems};
 
-    $.post("ajaxtest", data,function(e) {
+    $.post("SortedList/ajaxtest", data,function(e) {
     }, "json");
 
 }

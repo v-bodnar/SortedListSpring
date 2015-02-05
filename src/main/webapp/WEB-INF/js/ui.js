@@ -4,7 +4,7 @@
 var selectedItemIndex;
 $( document ).ready(function() {
     $("#sortedList").has('li').length ? $("#sortedList").show() : $("#sortedList").hide();
-
+    $("#button-group").hide();
 });
 
 function add(){
@@ -22,10 +22,7 @@ $("#sortedList").on("click","li", function(event) {
     selectedItemIndex = $(this);
     selectedItemIndex.css('color','red');
     $("#newItem").val(text);
-    $("#up").show();
-    $("#down").show();
-    $("#save").show();
-    $("#delete").show();
+    $("#button-group").show();
 });
 
 $("#up").on("click","", function(event) {
@@ -69,10 +66,7 @@ $("#delete").on("click","", function(event) {
         $("#newItem").val("");
         if (!$("#sortedList").has('li').length) {
             $("#sortedList").hide();
-            $("#up").hide();
-            $("#down").hide();
-            $("#save").hide();
-            $("#delete").hide();
+            $("#button-group").hide();
         }
     }
     saveToFile();

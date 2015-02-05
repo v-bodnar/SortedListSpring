@@ -25,7 +25,7 @@ public class HelloController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
 
-        model.addAttribute("message", "Awesome List!");
+        model.addAttribute("title", "Awesome List!");
 
         try {
             if (itemsDao == null)

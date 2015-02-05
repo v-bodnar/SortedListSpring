@@ -1,10 +1,16 @@
-ul{
-    border:1px inset  darkgray;
-    width:200px;
-}
-ul li{
-    width:200px;
-}
 button{
     display: none;
+}
+#container{
+    width:250px;
+    margin: 10px;
+}
+
+.input-group{
+    margin-bottom:10px !important;
+}
+
+.list-group{
+    margin-left: 20px;
+    cursor:pointer;
 }
